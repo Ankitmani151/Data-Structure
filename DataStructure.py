@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 #Given two strings, check to see if they are anagrams. An anagram is when the two strings can be written using the exact same letters
 def anagram(s,n):
     s=s.lower()
@@ -27,9 +24,6 @@ def anagram(s,n):
             return True
         else:
             return False
-
-
-# In[2]:
 
 
 #Given an integer array, output all the unique pairs that sum up to a specific value k.
@@ -61,10 +55,6 @@ for l in range(len(final_list)):
 print(count)    
         
 
-
-# In[3]:
-
-
 #Find the Missing Element
 def finder(arr1,arr2):
     arr1.sort()
@@ -79,7 +69,18 @@ def finder(arr1,arr2):
 #Test finder([5,5,7,7],[5,7,7])
 
 
-# In[ ]:
+#Largest Continuous Sum
+def large_cont_sum(arr):
+    if len(arr) == 0:
+        return 0
+    
+    max_num = sum = arr[0]# max=sum=arr[0] bug: TypeError: 'int' object is not callable. (Do not use the keyword!)
+    
+    for n in arr[1:]:
+        sum = max(sum+n, n)
+        max_num = max(sum, max_num)
+    return max_num
+    pass
 
 
 
