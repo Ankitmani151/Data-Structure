@@ -107,4 +107,14 @@ def compress(str1):
         final_string=final_string+((res[k])+str(counter[k]))
     return(final_string)
 
-
+########################################################################################################################
+#Given a string,determine if it is compreised of all unique characters. For example, the string 'abcde' has all unique characters and should return True. The string 'aabcde' contains duplicate characters and should return false.
+def uni_char(string1):
+    count=0
+    for i in range (len(string1)):
+        for j in range(i,len(string1)-1):
+            if string1[i]==string1[j+1]:
+                count=count+1
+            else:
+                count=count
+    return(count==0)
