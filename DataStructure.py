@@ -25,7 +25,7 @@ def anagram(s,n):
         else:
             return False
 
-
+########################################################################################################################
 #Given an integer array, output all the unique pairs that sum up to a specific value k.
 #So the input:  pair_sum([1,3,2,2],4)
 
@@ -54,7 +54,7 @@ for l in range(len(final_list)):
         count=count+1
 print(count)    
         
-
+####################################################################################################################
 #Find the Missing Element
 def finder(arr1,arr2):
     arr1.sort()
@@ -68,7 +68,7 @@ def finder(arr1,arr2):
 
 #Test finder([5,5,7,7],[5,7,7])
 
-
+#####################################################################################################################
 #Largest Continuous Sum
 def large_cont_sum(arr):
     if len(arr) == 0:
@@ -82,6 +82,7 @@ def large_cont_sum(arr):
     return max_num
     pass
 
+#####################################################################################################################
 #Given a string in the form 'AAAABBBBCCCCCDDEEEE' compress it to become 'A4B4C5D2E4'. For this problem, you can falsely "compress" strings of single or double letters. For instance, it is okay for 'AAB' to return 'A2B1' even though this technically takes more space.The function should also be case sensitive, so that a string 'AAAaaa' returns 'A3a3'.
 def compress(str1):
     final_string=""
