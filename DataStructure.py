@@ -82,6 +82,28 @@ def large_cont_sum(arr):
     return max_num
     pass
 
+#Given a string in the form 'AAAABBBBCCCCCDDEEEE' compress it to become 'A4B4C5D2E4'. For this problem, you can falsely "compress" strings of single or double letters. For instance, it is okay for 'AAB' to return 'A2B1' even though this technically takes more space.The function should also be case sensitive, so that a string 'AAAaaa' returns 'A3a3'.
+def compress(str1):
+    final_string=""
+    res = [] 
+    for i in str1: 
+        if i not in res: 
+            res.append(i) 
+    count=1
+    counter=[]
+    for i in range(len(str1)-1):
+        if str1[i]==str1[i+1]:
+            count=count+1
+            #print(str1[i])
 
+        else:
+            counter.append(count)
+            count=1
+            #print(str1[i])
+    counter.append(count)
+    final_string=""
+    for k in range(len(res)):
+        final_string=final_string+((res[k])+str(counter[k]))
+    return(final_string)
 
 
