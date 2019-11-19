@@ -29,3 +29,7 @@ def merge_sort(arr):
             arr[k]=righthalf[j]
             j=j+1
             k=k+1
+#checking the output
+arr = [45,67,23,45,21,24,7,2,6,4,90]
+merge_sort(arr)
+arr
